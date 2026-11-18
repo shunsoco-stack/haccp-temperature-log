@@ -1,0 +1,379 @@
+/* 記録のサマリー */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.summary-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.summary-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 24px;
+}
+.mint {
+  background: #e8f2ec;
+  color: #5a9c7c;
+}
+.peach {
+  background: #fbf0e6;
+  color: #c1945f;
+}
+.blue {
+  background: #edf2f8;
+  color: #8399b6;
+}
+.summary-card > div > span {
+  color: var(--muted);
+  font-size: 11px;
+}
+.summary-card strong,
+.metric strong {
+  display: block;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+.summary-card strong small,
+.metric strong small {
+  color: #96a098;
+  font-size: 13px;
+  font-weight: 400;
+}
+.summary-note {
+  font-size: 10px;
+  color: #98a39b;
+  flex-basis: 100%;
+}
+.mini-progress {
+  width: 100%;
+  height: 4px;
+  background: #eef2ef;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 7px 0;
+}
+.mini-progress i {
+  display: block;
+  height: 100%;
+  background: #73aa8d;
+}
+
+/* 時間帯の切り替えと機器カード */
+.section-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 23px;
+}
+.segmented {
+  display: flex;
+  background: #eaf0ec;
+  padding: 4px;
+  border-radius: 9px;
+  gap: 4px;
+}
+.segmented button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border-color: transparent;
+  color: #7a867e;
+  padding: 9px 20px;
+}
+.segmented .selected {
+  background: #fff;
+  color: var(--green);
+  box-shadow: 0 1px 5px #234e3910;
+  border-color: #e0e9e2;
+  font-weight: 600;
+}
+.slot-count {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #edf3ef;
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.section-title h2 {
+  font-size: 16px;
+  margin: 0;
+}
+.section-title > span {
+  font-size: 11px;
+  color: #8b978f;
+}
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+.reading-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+  min-width: 0;
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.equipment-icon {
+  display: grid;
+  place-items: center;
+  height: 38px;
+  width: 38px;
+  background: #eef5ef;
+  color: #6e9a7f;
+  border-radius: 10px;
+  font-size: 23px;
+}
+.equipment-icon.freezer {
+  color: #7897b3;
+  background: #edf3f8;
+}
+.status {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.pending {
+  background: #f4f3ed;
+  color: #9a9074;
+}
+.done {
+  background: #eaf4ee;
+  color: #55846a;
+}
+.reading-card h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+.card-caption {
+  font-size: 10px;
+  color: #7d8b81;
+  margin-bottom: 22px;
+}
+.card-caption span {
+  border-left: 1px solid var(--line);
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.field-label {
+  display: block;
+  font-size: 11px;
+  color: #819087;
+  margin-bottom: 16px;
+}
+.field-label select {
+  font-size: 12px;
+}
+.temperature-control {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+.temperature-control > button {
+  padding: 0;
+  flex: 0 0 44px;
+  height: 47px;
+  font-size: 20px;
+  color: #6f8477;
+  background: #f8faf8;
+}
+.temperature-control > div {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.temperature-control input {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  height: 54px;
+  padding: 4px 23px 4px 3px;
+  background: #fafcfb;
+  font-variant-numeric: tabular-nums;
+  appearance: textfield;
+}
+.temperature-control input::-webkit-inner-spin-button {
+  appearance: none;
+}
+.temperature-control input::placeholder {
+  color: #b4bdb6;
+}
+.temperature-control > div > span {
+  position: absolute;
+  right: 8px;
+  top: 14px;
+  font-size: 15px;
+  color: #8e9d92;
+}
+.temperature-display {
+  font-size: 44px;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 0;
+  font-variant-numeric: tabular-nums;
+}
+.temperature-display small {
+  font-size: 20px;
+  padding-left: 6px;
+}
+.record-meta {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin: 4px 0 24px;
+}
+.response-summary {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 18px;
+  font-size: 12px;
+}
+.response-form {
+  display: grid;
+  gap: 15px;
+  padding-top: 18px;
+}
+.history {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.history summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-top: 12px;
+}
+.alert-card {
+  border-color: #dcaca1;
+}
+
+/* 警告と空の状態 */
+.alert-banner,
+.missing-banner {
+  border: 1px solid #e8c2b9;
+  background: #fff5f1;
+  color: #9a4436;
+  padding: 18px 22px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+.alert-banner a {
+  display: block;
+  text-decoration: underline;
+  padding: 10px 0;
+  min-height: 44px;
+}
+.alert-banner p,
+.missing-banner p {
+  margin: 8px 0 0;
+}
+.missing-banner {
+  background: #fcf8ed;
+  border-color: #eee2c8;
+  color: #8e794c;
+}
+.empty-state {
+  background: #fff;
+  border: 1px dashed #d8e4db;
+  border-radius: 12px;
+  padding: 55px 20px;
+  text-align: center;
+}
+.empty-state > span {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 14px;
+}
+.empty-state p {
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 1250px) {
+  .equipment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .summary-card {
+    padding: 16px;
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  .summary-grid {
+    gap: 8px;
+  }
+  .summary-card {
+    padding: 12px 10px;
+    gap: 7px;
+  }
+  .summary-icon {
+    width: 27px;
+    height: 27px;
+    font-size: 17px;
+    border-radius: 7px;
+  }
+  .summary-card strong {
+    font-size: 25px;
+  }
+  .summary-card strong small {
+    font-size: 10px;
+  }
+  .summary-note,
+  .mini-progress {
+    display: none;
+  }
+  .summary-card > div > span {
+    font-size: 10px;
+  }
+  .section-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .segmented button {
+    flex: 1;
+    justify-content: center;
+    padding: 8px;
+  }
+  .section-toolbar > .muted {
+    text-align: right;
+  }
+  .reading-card {
+    padding: 22px;
+  }
+}
